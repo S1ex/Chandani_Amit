@@ -7,9 +7,9 @@ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isInter
 document.querySelectorAll(".s").forEach(function(s){io.observe(s)});
 for(var i=0;i<24;i++){var st=document.createElement("i");st.className="star";st.style.left=Math.random()*100+"%";st.style.top=Math.random()*100+"%";st.style.animationDelay=Math.random()*2.5+"s";document.getElementById(i%2?"s1":"s3").appendChild(st)}
 var wall=document.getElementById("wall");
-["First meeting","Our favourite place","The proposal"].forEach(function(c,i){
+["","",""].forEach(function(c,i){
 var f=document.createElement("div");f.className="fr";
-f.innerHTML='<div class="ph"><img src="images/couple-'+(i+1)+'.jpg" alt="'+c+'" style="width:100%;height:100%;object-fit:cover" onerror="this.remove()"></div><p>'+c+'</p>';wall.appendChild(f)});
+f.innerHTML='<div class="ph"><img src="images/Couple-'+(i+1)+'.jpg" alt="'+c+'" style="width:100%;height:100%;object-fit:cover" onerror="this.remove()"></div><p>'+c+'</p>';wall.appendChild(f)});
 function tick(){
 var d=T-new Date(), el=document.getElementById("cd");
 if(d<=0){el.textContent="Today we celebrate! ॐ";return}
